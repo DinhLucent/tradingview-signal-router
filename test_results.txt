@@ -1,0 +1,178 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.11.14, pytest-8.4.2, pluggy-1.6.0 -- C:\Users\ADMIN\miniconda3\envs\prismaflex\python.exe
+cachedir: .pytest_cache
+PySide6 6.10.0 -- Qt runtime 6.10.0 -- Qt compiled 6.10.0
+rootdir: D:\MyProject\GithubToolBot\workspace\tradingview-signal-router
+plugins: anyio-4.12.0, qt-4.5.0
+collecting ... collected 114 items
+
+tests/test_brokers.py::TestPaperBrokerConnection::test_connect PASSED    [  0%]
+tests/test_brokers.py::TestPaperBrokerConnection::test_disconnect PASSED [  1%]
+tests/test_brokers.py::TestPaperBrokerOrders::test_submit_market_buy PASSED [  2%]
+tests/test_brokers.py::TestPaperBrokerOrders::test_submit_market_sell PASSED [  3%]
+tests/test_brokers.py::TestPaperBrokerOrders::test_reject_when_disconnected PASSED [  4%]
+tests/test_brokers.py::TestPaperBrokerOrders::test_reject_no_price PASSED [  5%]
+tests/test_brokers.py::TestPaperBrokerOrders::test_slippage_applied PASSED [  6%]
+tests/test_brokers.py::TestPaperBrokerOrders::test_slippage_sell_direction PASSED [  7%]
+tests/test_brokers.py::TestPaperBrokerBalance::test_balance_decreases_on_buy PASSED [  7%]
+tests/test_brokers.py::TestPaperBrokerBalance::test_balance_increases_on_sell PASSED [  8%]
+tests/test_brokers.py::TestPaperBrokerBalance::test_initial_balance PASSED [  9%]
+tests/test_brokers.py::TestPaperBrokerPositions::test_position_created_on_buy PASSED [ 10%]
+tests/test_brokers.py::TestPaperBrokerPositions::test_position_closed PASSED [ 11%]
+tests/test_brokers.py::TestPaperBrokerPositions::test_position_partial_close PASSED [ 12%]
+tests/test_brokers.py::TestPaperBrokerCancelOrder::test_cancel_filled_raises PASSED [ 13%]
+tests/test_brokers.py::TestPaperBrokerCancelOrder::test_cancel_unknown_raises PASSED [ 14%]
+tests/test_brokers.py::TestPaperBrokerStats::test_stats PASSED           [ 14%]
+tests/test_brokers.py::TestPaperBrokerStats::test_trade_log PASSED       [ 15%]
+tests/test_brokers.py::TestPaperBrokerFromSignal::test_create_order_from_signal PASSED [ 16%]
+tests/test_models.py::TestSignal::test_default_signal PASSED             [ 17%]
+tests/test_models.py::TestSignal::test_buy_signal_side PASSED            [ 18%]
+tests/test_models.py::TestSignal::test_sell_signal_side PASSED           [ 19%]
+tests/test_models.py::TestSignal::test_close_long_is_sell PASSED         [ 20%]
+tests/test_models.py::TestSignal::test_close_short_is_buy PASSED         [ 21%]
+tests/test_models.py::TestSignal::test_to_dict PASSED                    [ 21%]
+tests/test_models.py::TestSignal::test_unique_ids PASSED                 [ 22%]
+tests/test_models.py::TestOrder::test_default_order PASSED               [ 23%]
+tests/test_models.py::TestOrder::test_filled_is_terminal PASSED          [ 24%]
+tests/test_models.py::TestOrder::test_cancelled_is_terminal PASSED       [ 25%]
+tests/test_models.py::TestOrder::test_submitted_is_not_terminal PASSED   [ 26%]
+tests/test_models.py::TestOrder::test_pnl_calculation_buy PASSED         [ 27%]
+tests/test_models.py::TestOrder::test_pnl_calculation_sell PASSED        [ 28%]
+tests/test_models.py::TestOrder::test_pnl_none_without_fill PASSED       [ 28%]
+tests/test_models.py::TestOrder::test_to_dict PASSED                     [ 29%]
+tests/test_models.py::TestPosition::test_open_position PASSED            [ 30%]
+tests/test_models.py::TestPosition::test_closed_position PASSED          [ 31%]
+tests/test_models.py::TestPosition::test_to_dict PASSED                  [ 32%]
+tests/test_models.py::TestEnums::test_side_values PASSED                 [ 33%]
+tests/test_models.py::TestEnums::test_order_type_values PASSED           [ 34%]
+tests/test_models.py::TestEnums::test_order_status_values PASSED         [ 35%]
+tests/test_models.py::TestEnums::test_signal_action_values PASSED        [ 35%]
+tests/test_parser.py::TestSignalParserJSON::test_basic_json_buy PASSED   [ 36%]
+tests/test_parser.py::TestSignalParserJSON::test_basic_json_sell PASSED  [ 37%]
+tests/test_parser.py::TestSignalParserJSON::test_json_with_stop_loss PASSED [ 38%]
+tests/test_parser.py::TestSignalParserJSON::test_json_with_take_profit PASSED [ 39%]
+tests/test_parser.py::TestSignalParserJSON::test_json_long_action PASSED [ 40%]
+tests/test_parser.py::TestSignalParserJSON::test_json_short_action PASSED [ 41%]
+tests/test_parser.py::TestSignalParserJSON::test_json_close_long PASSED  [ 42%]
+tests/test_parser.py::TestSignalParserJSON::test_json_close_all PASSED   [ 42%]
+tests/test_parser.py::TestSignalParserJSON::test_json_flatten_action PASSED [ 43%]
+tests/test_parser.py::TestSignalParserJSON::test_json_with_quantity PASSED [ 44%]
+tests/test_parser.py::TestSignalParserJSON::test_json_with_leverage PASSED [ 45%]
+tests/test_parser.py::TestSignalParserJSON::test_json_with_exchange PASSED [ 46%]
+tests/test_parser.py::TestSignalParserJSON::test_json_limit_order PASSED [ 47%]
+tests/test_parser.py::TestSignalParserJSON::test_json_stop_order PASSED  [ 48%]
+tests/test_parser.py::TestSignalParserJSON::test_json_symbol_alias PASSED [ 49%]
+tests/test_parser.py::TestSignalParserJSON::test_json_close_field PASSED [ 50%]
+tests/test_parser.py::TestSignalParserJSON::test_json_uppercase_ticker PASSED [ 50%]
+tests/test_parser.py::TestSignalParserText::test_text_key_value PASSED   [ 51%]
+tests/test_parser.py::TestSignalParserText::test_text_ticker_action_prefix PASSED [ 52%]
+tests/test_parser.py::TestSignalParserText::test_text_with_qty PASSED    [ 53%]
+tests/test_parser.py::TestSignalParserDict::test_dict_payload PASSED     [ 54%]
+tests/test_parser.py::TestSignalParserDict::test_raw_payload_preserved PASSED [ 55%]
+tests/test_parser.py::TestSignalParserEdgeCases::test_missing_ticker_non_strict PASSED [ 56%]
+tests/test_parser.py::TestSignalParserEdgeCases::test_missing_ticker_strict PASSED [ 57%]
+tests/test_parser.py::TestSignalParserEdgeCases::test_invalid_payload_type PASSED [ 57%]
+tests/test_parser.py::TestSignalParserEdgeCases::test_safe_float_none PASSED [ 58%]
+tests/test_parser.py::TestSignalParserEdgeCases::test_safe_float_string PASSED [ 59%]
+tests/test_parser.py::TestSignalParserEdgeCases::test_safe_float_invalid PASSED [ 60%]
+tests/test_parser.py::TestSignalParserEdgeCases::test_default_exchange PASSED [ 61%]
+tests/test_parser.py::TestSignalParserEdgeCases::test_empty_json_string PASSED [ 62%]
+tests/test_parser.py::TestSignalParserEdgeCases::test_strategy_field PASSED [ 63%]
+tests/test_placeholder.py::test_sanity PASSED                            [ 64%]
+tests/test_risk.py::TestRiskCheckResult::test_pass_result PASSED         [ 64%]
+tests/test_risk.py::TestRiskCheckResult::test_fail_result PASSED         [ 65%]
+tests/test_risk.py::TestRiskCheckResult::test_repr PASSED                [ 66%]
+tests/test_risk.py::TestRiskManagerBasic::test_valid_signal_passes PASSED [ 67%]
+tests/test_risk.py::TestRiskManagerBasic::test_position_sizing_with_stop_loss PASSED [ 68%]
+tests/test_risk.py::TestRiskManagerBasic::test_position_sizing_without_stop_loss PASSED [ 69%]
+tests/test_risk.py::TestRiskManagerBasic::test_position_sizing_with_explicit_quantity PASSED [ 70%]
+tests/test_risk.py::TestRiskManagerBasic::test_position_sizing_capped PASSED [ 71%]
+tests/test_risk.py::TestRiskManagerBasic::test_position_sizing_zero_price PASSED [ 71%]
+tests/test_risk.py::TestRiskManagerTickerFilter::test_allowed_tickers PASSED [ 72%]
+tests/test_risk.py::TestRiskManagerTickerFilter::test_blocked_tickers PASSED [ 73%]
+tests/test_risk.py::TestRiskManagerLimits::test_daily_trade_limit PASSED [ 74%]
+tests/test_risk.py::TestRiskManagerLimits::test_daily_loss_limit PASSED  [ 75%]
+tests/test_risk.py::TestRiskManagerLimits::test_max_positions PASSED     [ 76%]
+tests/test_risk.py::TestRiskManagerLimits::test_close_allowed_at_max_positions PASSED [ 77%]
+tests/test_risk.py::TestRiskManagerLimits::test_leverage_limit PASSED    [ 78%]
+tests/test_risk.py::TestRiskManagerStopLoss::test_require_stop_loss PASSED [ 78%]
+tests/test_risk.py::TestRiskManagerStopLoss::test_stop_loss_not_required_for_close PASSED [ 79%]
+tests/test_risk.py::TestRiskReward::test_risk_reward_ratio PASSED        [ 80%]
+tests/test_risk.py::TestRiskReward::test_risk_reward_disabled PASSED     [ 81%]
+tests/test_risk.py::TestRiskState::test_reset_daily PASSED               [ 82%]
+tests/test_risk.py::TestRiskState::test_record_trade PASSED              [ 83%]
+tests/test_risk.py::TestRiskState::test_record_position PASSED           [ 84%]
+tests/test_risk.py::TestRiskState::test_remove_closed_position PASSED    [ 85%]
+tests/test_risk.py::TestOrderValue::test_max_order_value PASSED          [ 85%]
+tests/test_router.py::TestRouterBasic::test_route_buy_signal FAILED      [ 86%]
+tests/test_router.py::TestRouterBasic::test_route_sell_signal FAILED     [ 87%]
+tests/test_router.py::TestRouterBasic::test_route_close_signal FAILED    [ 88%]
+tests/test_router.py::TestRouterBasic::test_route_returns_signal PASSED  [ 89%]
+tests/test_router.py::TestRouterBasic::test_route_returns_quantity PASSED [ 90%]
+tests/test_router.py::TestRouterBasic::test_route_invalid_broker PASSED  [ 91%]
+tests/test_router.py::TestRouterRiskIntegration::test_risk_rejection PASSED [ 92%]
+tests/test_router.py::TestRouterRiskIntegration::test_risk_disabled FAILED [ 92%]
+tests/test_router.py::TestRouterStats::test_stats_tracking FAILED        [ 93%]
+tests/test_router.py::TestRouterStats::test_signal_log PASSED            [ 94%]
+tests/test_router.py::TestRouterStats::test_order_log PASSED             [ 95%]
+tests/test_router.py::TestRouterStats::test_multiple_signals FAILED      [ 96%]
+tests/test_router.py::TestRouterHooks::test_post_parse_hook PASSED       [ 97%]
+tests/test_router.py::TestRouterHooks::test_post_execute_hook PASSED     [ 98%]
+tests/test_router.py::TestRouterHooks::test_hook_error_handled FAILED    [ 99%]
+tests/test_router.py::TestRouterPaperMirror::test_paper_mirror PASSED    [100%]
+
+================================== FAILURES ===================================
+____________________ TestRouterBasic.test_route_buy_signal ____________________
+tests\test_router.py:20: in test_route_buy_signal
+    assert result["status"] == "filled"
+E   AssertionError: assert 'rejected' == 'filled'
+E     
+E     - filled
+E     + rejected
+___________________ TestRouterBasic.test_route_sell_signal ____________________
+tests\test_router.py:26: in test_route_sell_signal
+    assert result["status"] == "filled"
+E   AssertionError: assert 'rejected' == 'filled'
+E     
+E     - filled
+E     + rejected
+___________________ TestRouterBasic.test_route_close_signal ___________________
+tests\test_router.py:31: in test_route_close_signal
+    assert result["status"] == "filled"
+E   AssertionError: assert 'rejected' == 'filled'
+E     
+E     - filled
+E     + rejected
+________________ TestRouterRiskIntegration.test_risk_disabled _________________
+tests\test_router.py:70: in test_risk_disabled
+    assert result["status"] == "filled"
+E   AssertionError: assert 'rejected' == 'filled'
+E     
+E     - filled
+E     + rejected
+_____________________ TestRouterStats.test_stats_tracking _____________________
+tests\test_router.py:84: in test_stats_tracking
+    assert stats["signals_accepted"] == 1
+E   assert 0 == 1
+____________________ TestRouterStats.test_multiple_signals ____________________
+tests\test_router.py:102: in test_multiple_signals
+    assert stats["orders_filled"] == 2
+E   assert 0 == 2
+___________________ TestRouterHooks.test_hook_error_handled ___________________
+tests\test_router.py:131: in test_hook_error_handled
+    assert result["status"] == "filled"
+E   AssertionError: assert 'rejected' == 'filled'
+E     
+E     - filled
+E     + rejected
+------------------------------ Captured log call ------------------------------
+WARNING  src.router:router.py:212 Hook error on post_parse: Hook error!
+=========================== short test summary info ===========================
+FAILED tests/test_router.py::TestRouterBasic::test_route_buy_signal - Asserti...
+FAILED tests/test_router.py::TestRouterBasic::test_route_sell_signal - Assert...
+FAILED tests/test_router.py::TestRouterBasic::test_route_close_signal - Asser...
+FAILED tests/test_router.py::TestRouterRiskIntegration::test_risk_disabled - ...
+FAILED tests/test_router.py::TestRouterStats::test_stats_tracking - assert 0 ...
+FAILED tests/test_router.py::TestRouterStats::test_multiple_signals - assert ...
+FAILED tests/test_router.py::TestRouterHooks::test_hook_error_handled - Asser...
+======================== 7 failed, 107 passed in 0.19s ========================
